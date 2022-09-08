@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title id="titulo">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <div id="contenedor">
+    <ion-card >    
+      <ion-item >      
+        <ion-icon name="person-outline" slot="start"></ion-icon>      
+        <ion-input required= true type="text" placeholder = "Correo electrónico" #mail="ngModel" [ngModel]="user.mail" required></ion-input>
+      </ion-item>
+      <ion-item>      
+        <ion-icon name="key-outline" slot="start"></ion-icon>
+        <ion-input required= true type="password" placeholder = "Contraseña" #password="ngModel" [ngModel]="user.password" required></ion-input>
+      </ion-item>  
+    </ion-card>  
+    <ion-button expand="block" color="dark" ion-button block (click)="Validar(mail.value, password.value)">Iniciar sesión</ion-button>  
+    <ion-button expand="block" color="dark" ion-button block (click)="UsuarioRegistrado()">Usuario registrado</ion-button>
+    <ion-button expand="block" color="dark" ion-button block (click)="UsuarioInvalido()">Usuario inválido</ion-button>    
+  </div> 
+</ion-content>
+<!-- Fade Footer -->
+<ion-footer collapse="fade">
+  <ion-toolbar>
+    <ion-title >Soy nuevo aquí. <a routerLink="/signup"> Quiero registrarme.</a></ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,25 @@
+#titulo{
+  text-align: center;
+}
+
+#contenedor {  
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); 
+}
+
+p {
+  color: rgb(243, 239, 239);
+  padding-left: 2%;  
+}
+
+ion-content {
+  --background: linear-gradient(to top, #23BAE2 0%, #BC3AF8 100%);
+}
+
+ion-button {
+  padding-left: 0.8vh;
+  padding-right: 0.8vh;
+}
